@@ -5,6 +5,7 @@ export default function Books() {
   return (
     <>
       <BooksList />
+      <div className="horizontal-divider" />
       <AddBook />
     </>
   );

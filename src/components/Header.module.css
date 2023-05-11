@@ -1,15 +1,66 @@
 .header {
-  display: flex;
-  justify-content: space-around;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
   align-items: center;
-}
-
-.navigation ul {
-  display: flex;
-  list-style: none;
+  justify-content: space-between;
+  padding: 1em 3em 1.2em 3em;
   gap: 1em;
+  display: flex;
+  flex-direction: row;
 }
 
-.navigation ul a {
+.nav {
+  padding: 24px 4%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 239px;
+}
+
+.nav ul a {
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  opacity: 0.5;
+  color: #121212;
+}
+
+.nav ul {
+  display: flex;
+  position: fixed;
+  list-style-type: none;
+  gap: 30px;
+  margin-left: -51%;
+}
+
+nav h1 {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+  gap: 10px;
+}
+
+.nav ul a:focus,
+.nav ul a:active {
+  opacity: 1;
+}
+
+.im_icon {
+  border: 1px solid #d3d3d3;
+  color: #0290ff;
+  padding: 1em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.im_icon > * {
+  flex: 1 0 auto;
 }

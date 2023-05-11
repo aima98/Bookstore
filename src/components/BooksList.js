@@ -6,10 +6,41 @@ import { deleteBook, fetchBooks } from '../redux/utils';
 function Book({ title, author, removeBook }) {
   return (
     <div className="container">
-      <div>
-        <h2>{title}</h2>
-        <p>{author}</p>
-        <button type="button" onClick={removeBook}>Remove</button>
+      <div className="Book">
+        <div className="book-content">
+          <div className="book-info">
+            <h4 className="book-category">Category</h4>
+            <h2>{title}</h2>
+            <h6>{author}</h6>
+            <div className="action-buttons">
+              <button className="rmv-btn" type="button">Comments</button>
+              <div className="vertical-divider" />
+              <button className="rmv-btn" type="button" onClick={removeBook}>Remove</button>
+              <div className="vertical-divider" />
+              <button className="rmv-btn" type="button">Edit</button>
+            </div>
+          </div>
+          <div className="Progress">
+            <div className="circle-container">
+              <div className="circle" />
+            </div>
+            <div className="stat">
+              <p className="percent-complete">64%</p>
+              <p className="completed">Completed</p>
+            </div>
+            <div className="progress-divider" />
+            <div className="current-chapter">
+              <div className="current">
+                <p className="label">CURRENT CHAPTER</p>
+                <p className="chapter">Chapter 17: &quot;A lesson learned&quot;</p>
+              </div>
+              <div>
+                <button className="primary-button" type="button">UPDATE PROGRESS</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );
