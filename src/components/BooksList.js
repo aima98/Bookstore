@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteBook, getBooks } from '../redux/utils';
+import { deleteBook, fetchBooks } from '../redux/utils';
 
 function Book({ title, author, removeBook }) {
   return (
@@ -26,7 +26,7 @@ export default function BooksList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getBooks());
+    dispatch(fetchBooks());
   }, [dispatch]);
 
   const loading = isLoading && <p>Loading...</p>;
