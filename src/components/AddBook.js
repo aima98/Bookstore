@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addBook } from '../redux/utils';
+import styles from './AddBook.module.css';
 
 const template = {
   item_id: '',
@@ -28,10 +29,11 @@ export default function AddBook() {
   }
 
   return (
-    <section>
+    <section className={styles.addBook}>
       <h2>ADD A NEW BOOK</h2>
-      <form>
+      <form className={styles.form}>
         <input
+          className={styles.input}
           value={values.title || ''}
           type="text"
           name="title"
@@ -40,14 +42,15 @@ export default function AddBook() {
         />
 
         <input
+          className={styles.input1}
           value={values.author || ''}
           type="text"
           name="author"
-          placeholder="author"
+          placeholder="Author"
           onChange={handleChange}
         />
 
-        <button type="submit" onClick={handleSubmit}>Add Book</button>
+        <button type="submit" className={styles.btn} onClick={handleSubmit}>ADD BOOK</button>
       </form>
     </section>
   );
